@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Caikaidi">
 <meta property="og:description" content="简要介绍一下安卓终端神器Termux及相关配置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-17T06:25:39.826Z">
+<meta property="og:updated_time" content="2018-06-17T13:03:36.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安卓终端配置">
 <meta name="twitter:description" content="简要介绍一下安卓终端神器Termux及相关配置">
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  388
+                  552
                 </span>
               
 
@@ -407,9 +407,16 @@
 <p>然后就可以正常安装使用了：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --ip=0.0.0.0</span><br></pre></td></tr></table></figure>
 <p>但不会自动弹出浏览器，要手动复制带<code>token</code>的链接，也可以在局域网内其他机器访问<code>192.168.xx.xx:8888</code>，然后输入<code>token</code>进行连接，此时<code>new</code>一个<code>Terminal</code>的话就是类似<code>ssh</code>的连接了。</p>
+<h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>搭建一个<code>ssh</code>服务也很简单，在安装了<code>openssh</code>之后，只需要</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure>
+<p>就可以跑起来一个后台的<code>server</code>，默认端口是<code>8022</code>，不支持用户名+密码的登录方式，只能用公私钥的方式，将电脑端<code>~/.ssh/id_rsa.pub</code>写入<code>termux</code>上的<code>~/.ssh/authorized_keys</code>文件中（可以通过<code>QQ</code>和<code>vim</code>的方式复制，<code>termux</code>的<code>vim</code>可以长按粘贴和触控调整光标位置，很方便）。</p>
+<p>导入证书文件之后，就可以在电脑端登陆了：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 192.168.50.72 -p 8022</span><br></pre></td></tr></table></figure>
+<p>ip地址可以用<code>ifconfig</code>查看，连接会有明显的延迟感。</p>
+<p>退出直接使用<code>exit</code>命令。</p>
 <h2 id="To-do-List"><a href="#To-do-List" class="headerlink" title="To-do List"></a>To-do List</h2><ul>
 <li style="list-style: none"><input type="checkbox"> hydra渗透</li>
-<li style="list-style: none"><input type="checkbox"> ssh</li>
+<li style="list-style: none"><input type="checkbox" checked> ssh</li>
 <li style="list-style: none"><input type="checkbox"> aria2</li>
 <li style="list-style: none"><input type="checkbox"> </li>
 </ul>
@@ -658,7 +665,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-do-List"><span class="nav-text">To-do List</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH"><span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-do-List"><span class="nav-text">To-do List</span></a></li></ol></div>
             
 
           </div>
