@@ -101,10 +101,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="安卓终端配置">
 <meta property="og:url" content="http://caikaidi.github.io/2018/06/17/android/index.html">
-<meta property="og:site_name" content="Caikaidi">
+<meta property="og:site_name" content="本楊">
 <meta property="og:description" content="简要介绍一下安卓终端神器Termux及相关配置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-17T13:03:36.634Z">
+<meta property="og:updated_time" content="2018-06-18T13:14:05.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安卓终端配置">
 <meta name="twitter:description" content="简要介绍一下安卓终端神器Termux及相关配置">
@@ -143,7 +143,7 @@
 
 
 
-  <title>安卓终端配置 | Caikaidi</title>
+  <title>安卓终端配置 | 本楊</title>
   
 
 
@@ -173,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Caikaidi</span>
+        <span class="site-title">本楊</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -279,7 +279,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Caikaidi">
+      <meta itemprop="name" content="本楊">
     </span>
 
     
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  552
+                  1,029
                 </span>
               
 
@@ -414,11 +414,23 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 192.168.50.72 -p 8022</span><br></pre></td></tr></table></figure>
 <p>ip地址可以用<code>ifconfig</code>查看，连接会有明显的延迟感。</p>
 <p>退出直接使用<code>exit</code>命令。</p>
+<h2 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h2><p>基于python的微信对接api，接口做的很棒，有不小的发挥空间。</p>
+<p>pip直接安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install itchat</span><br></pre></td></tr></table></figure>
+<p>目前的几点打算：</p>
+<ul>
+<li>查看那些人拉黑/删除了自己，这个写好的代码很多，也没什么好改的</li>
+<li>对接<a href="www.tuling123.com">图灵机器人</a>，可以实现聊天和简单的助手功能</li>
+<li>通过和自己聊天来实现某些控制</li>
+<li><del>在终端里聊天装逼</del></li>
+</ul>
+<p>图灵机器人的代码部分经过一个小时的调试做出了1.0版：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> itchat.content <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> itchat</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">KEY = <span class="string">'76ff86311b704f4ea28d4532f0fb3bda'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_response</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="comment"># 构造要发送给服务器的数据</span></span><br><span class="line">    apiUrl = <span class="string">'http://www.tuling123.com/openapi/api'</span></span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'key'</span>    : KEY,</span><br><span class="line">        <span class="string">'info'</span>   : msg,</span><br><span class="line">        <span class="string">'userid'</span> : <span class="string">'wechat-robot'</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.post(apiUrl, data=data).json()</span><br><span class="line">        <span class="comment"># 字典的get方法在字典没有'text'值的时候会返回None而不会抛出异常</span></span><br><span class="line">        <span class="keyword">return</span> r.get(<span class="string">'text'</span>)</span><br><span class="line">    <span class="comment"># 为了防止服务器没有正常响应导致程序异常退出，这里用try-except捕获了异常</span></span><br><span class="line">    <span class="comment"># 如果服务器没能正常交互（返回非json或无法连接），那么就会进入下面的return</span></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="comment"># 将会返回一个None</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#@itchat.msg_register(itchat.content.TEXT)</span></span><br><span class="line"><span class="meta">@itchat.msg_register([TEXT,PICTURE])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tuling_reply</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="comment"># 为了保证在图灵Key出现问题的时候仍旧可以回复，这里设置一个默认回复</span></span><br><span class="line">    defaultReply = <span class="string">'I received: '</span> + msg[<span class="string">'Text'</span>]</span><br><span class="line">    <span class="comment"># 如果图灵Key出现问题，那么reply将会是None</span></span><br><span class="line">    reply = get_response(msg[<span class="string">'Text'</span>])</span><br><span class="line">    <span class="comment"># a or b的意思是，如果a有内容，那么返回a，否则返回b</span></span><br><span class="line">    <span class="comment"># 有内容一般就是指非空或者非None，你可以用`if a: print('True')`来测试</span></span><br><span class="line">    <span class="keyword">return</span> reply <span class="keyword">or</span> defaultReply</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为了让实验过程更加方便（修改程序不用多次扫码），我们使用热启动</span></span><br><span class="line">itchat.auto_login(hotReload=<span class="keyword">True</span>)</span><br><span class="line">itchat.run()</span><br></pre></td></tr></table></figure>
 <h2 id="To-do-List"><a href="#To-do-List" class="headerlink" title="To-do List"></a>To-do List</h2><ul>
 <li style="list-style: none"><input type="checkbox"> hydra渗透</li>
 <li style="list-style: none"><input type="checkbox" checked> ssh</li>
 <li style="list-style: none"><input type="checkbox"> aria2</li>
-<li style="list-style: none"><input type="checkbox"> </li>
+<li style="list-style: none"><input type="checkbox"> WeChat</li>
 </ul>
 <hr>
 
@@ -665,7 +677,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH"><span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-do-List"><span class="nav-text">To-do List</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH"><span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信"><span class="nav-text">微信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-do-List"><span class="nav-text">To-do List</span></a></li></ol></div>
             
 
           </div>

@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://caikaidi.github.io/2018/06/17/android/</loc>
-    <lastmod>2018-06-17T13:03:36.634Z</lastmod>
+    <lastmod>2018-06-18T13:14:05.336Z</lastmod>
     <data>
         <display>
         <title>安卓终端配置</title>
@@ -19,6 +19,28 @@
            
              
               <breadCrumb title="日志" url="http://caikaidi.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://caikaidi.github.io/2018/06/08/xuexiao/</loc>
+    <lastmod>2018-06-18T12:38:03.079Z</lastmod>
+    <data>
+        <display>
+        <title>学校</title>
+        <pubTime>2018-06-08T02:25:01.000Z</pubTime>
+        
+        <tag>摄影作品</tag>
+         
+        <tag>小品</tag>
+         
+         
+           
+             
+              <breadCrumb title="相册" url="http://caikaidi.github.io/categories/%E7%9B%B8%E5%86%8C/"/>
           
         </display>
     </data>
@@ -65,28 +87,6 @@
            
              
               <breadCrumb title="笔记" url="http://caikaidi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://caikaidi.github.io/2018/06/08/xuexiao/</loc>
-    <lastmod>2018-06-10T00:48:38.965Z</lastmod>
-    <data>
-        <display>
-        <title>学校</title>
-        <pubTime>2018-06-08T02:25:01.000Z</pubTime>
-        
-        <tag>摄影作品</tag>
-         
-        <tag>小品</tag>
-         
-         
-           
-             
-              <breadCrumb title="相册" url="http://caikaidi.github.io/categories/%E7%9B%B8%E5%86%8C/"/>
           
         </display>
     </data>
