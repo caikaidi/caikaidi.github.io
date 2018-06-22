@@ -12,6 +12,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Sitemap: http://caikaidi.github.io/note/sitemap.xml
-Sitemap: http://caikaidi.github.io/note/baidusitemap.xml
+Sitemap: http://caikaidi.github.io/sitemap.xml
+Sitemap: http://caikaidi.github.io/baidusitemap.xml
 
