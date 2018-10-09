@@ -98,14 +98,14 @@
 
 <meta name="keywords" content="fiber,laser">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ciomp">
+<meta property="og:title" content="CIOMP">
 <meta property="og:url" content="http://caikaidi.github.io/2018/09/02/ciomp/index.html">
 <meta property="og:site_name" content="本楊">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/09/14/5b9b09b866a0b.png">
-<meta property="og:updated_time" content="2018-09-14T01:32:46.044Z">
+<meta property="og:updated_time" content="2018-10-09T02:30:37.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ciomp">
+<meta name="twitter:title" content="CIOMP">
 <meta name="twitter:image" content="https://i.loli.net/2018/09/14/5b9b09b866a0b.png">
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <title>ciomp | 本楊</title>
+  <title>CIOMP | 本楊</title>
   
 
 
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ciomp</h1>
+          <h1 class="post-title" itemprop="name headline">CIOMP</h1>
         
 
         <div class="post-meta">
@@ -359,7 +359,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  606
+                  802
                 </span>
               
 
@@ -393,6 +393,8 @@
 <p>We are working with a design that don’t use the fiber end as resonator recently, but it still doesn’t works well. The basic idea is connecting the fiber tips with some lens lightly, so the resonator surfaces become the lens surfaces. The reason we fail is perhaps the bad quality of fiber, cause we were using a short testing faber to test this design.</p>
 <h2 id="Beam-Combination"><a href="#Beam-Combination" class="headerlink" title="Beam Combination"></a>Beam Combination</h2><p>As ZBLAN can’t provide very high power laser, beam combination is a proper way to approach it. There are many methods to combine lights, we choose spectral beam combination (SBC) to begin with. SBC gives good beam quality as single element after combination, and gives power cloth to the sum of elements. We are going to combine two 2.8 $\mu$m fiber laser by SBC, thus we make a plate to hold two fibers and keep them drying. My lab is still under decoration so the subsequent experiment will be arranged after two weeks. </p>
 <p>One important thing I’m doing now is to test the polarization of this fiber laser. The grating we’re using have polarization relied efficiency, we should make the polarization of the fiber perpendicular to the grating groove direction to get the high diffraction efficiency up to 85%.</p>
+<h2 id="Rate-Equations"><a href="#Rate-Equations" class="headerlink" title="Rate Equations"></a>Rate Equations</h2><p>For 2.8 $\mu$m Er:ZBLAN fiber, the machanism was widely investigated. It can be considered as a simple three energy level system. But when it comes to 3.5 $\mu$m, things are more complicated. To get 3.5 $\mu$m laser we should use two pump laser, and the output is not pure 3.5 $\mu$m laser as well. Seven energy level should be calculated in this system, which signifcantly increase the difficulty.</p>
+<p>Luckily, or unluckily, there are someone done this before. There is a paper gives out all the equations we need, and list many of the complicated paraments. But that paper didn’t give their matlab code, I worked for a long time in the code and get a rough one. In my program the pump power and number of partical at different energy level is well simulated, but the laser parts doesn’t work well. Because I failed simulate the osilator, so the condition seems like a infinitly long fiber. It shoudn’t be too hard to repair it, but I’m just a little tired with these codes. Maybe I’ll back to it next week.</p>
 <hr>  
 
       
@@ -642,7 +644,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Orientation"><span class="nav-text">Orientation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZBLAN"><span class="nav-text">ZBLAN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Beam-Combination"><span class="nav-text">Beam Combination</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Orientation"><span class="nav-text">Orientation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZBLAN"><span class="nav-text">ZBLAN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Beam-Combination"><span class="nav-text">Beam Combination</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rate-Equations"><span class="nav-text">Rate Equations</span></a></li></ol></div>
             
 
           </div>
