@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://caikaidi.github.io/2019/05/29/AYear/</loc>
+    <lastmod>2019-06-03T01:05:25.672Z</lastmod>
+    <data>
+        <display>
+        <title>AYear</title>
+        <pubTime>2019-05-29T01:12:12.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="日志" url="http://caikaidi.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://caikaidi.github.io/2018/09/02/ciomp/</loc>
     <lastmod>2018-10-09T02:30:37.525Z</lastmod>
     <data>
@@ -41,6 +59,28 @@
            
              
               <breadCrumb title="日志" url="http://caikaidi.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://caikaidi.github.io/2018/06/10/matplotlib/</loc>
+    <lastmod>2018-09-14T01:31:16.752Z</lastmod>
+    <data>
+        <display>
+        <title>python作图</title>
+        <pubTime>2018-06-10T10:32:35.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>Matplotlib</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://caikaidi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
@@ -87,28 +127,6 @@
            
              
               <breadCrumb title="日志" url="http://caikaidi.github.io/categories/%E6%97%A5%E5%BF%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://caikaidi.github.io/2018/06/10/matplotlib/</loc>
-    <lastmod>2018-06-10T10:50:48.765Z</lastmod>
-    <data>
-        <display>
-        <title>python作图</title>
-        <pubTime>2018-06-10T10:32:35.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>Matplotlib</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://caikaidi.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
           
         </display>
     </data>
