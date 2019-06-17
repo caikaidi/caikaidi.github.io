@@ -505,6 +505,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="vcomments"></div>
+    
   </div>
 
 
@@ -856,6 +858,21 @@ show_date_time();
 
 
 
+
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.1.4/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    new Valine({
+        av: AV,
+        el: '#vcomments' ,
+        verify: false,
+        notify: false,
+        app_id: 'jEQAdiOzRHl0mx1Lmr7kLUFs-gzGzoHsz',
+        app_key: 'oHr2KEOu7rlDb2CHD6aC93Nc',
+        placeholder: '评论幸运+1'
+    });
+  </script>
 
 
 
