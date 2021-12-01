@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="安卓,Termux,">
+  <meta name="keywords" content="server,srs,stream,">
 
 
 
@@ -89,20 +89,21 @@
 
 
 
-<meta name="description" content="简要介绍一下安卓终端神器Termux及相关配置">
-<meta name="keywords" content="安卓,Termux">
+<meta name="description" content="使用SRS+OBS做一个自己的直播服务。">
+<meta name="keywords" content="server,srs,stream">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安卓终端配置">
-<meta property="og:url" content="https://caikaidi.cn/2018/06/17/android/index.html">
+<meta property="og:title" content="串流服务器-srs">
+<meta property="og:url" content="https://caikaidi.cn/2021/12/01/stream/index.html">
 <meta property="og:site_name" content="本楊">
-<meta property="og:description" content="简要介绍一下安卓终端神器Termux及相关配置">
+<meta property="og:description" content="使用SRS+OBS做一个自己的直播服务。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc12a6b161c.png">
-<meta property="og:updated_time" content="2018-10-09T02:30:23.000Z">
+<meta property="og:image" content="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/12/01/jGvJd87qA1kUWLl.png">
+<meta property="og:updated_time" content="2021-12-01T03:38:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安卓终端配置">
-<meta name="twitter:description" content="简要介绍一下安卓终端神器Termux及相关配置">
-<meta name="twitter:image" content="https://i.loli.net/2018/10/09/5bbc12a6b161c.png">
+<meta name="twitter:title" content="串流服务器-srs">
+<meta name="twitter:description" content="使用SRS+OBS做一个自己的直播服务。">
+<meta name="twitter:image" content="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg">
 
 
 
@@ -132,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://caikaidi.cn/2018/06/17/android/">
+  <link rel="canonical" href="https://caikaidi.cn/2021/12/01/stream/">
 
 
 
 
 
-  <title>安卓终端配置 | 本楊</title>
+  <title>串流服务器-srs | 本楊</title>
   
 
 
@@ -265,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://caikaidi.cn/2018/06/17/android/">
+    <link itemprop="mainEntityOfPage" href="https://caikaidi.cn/2021/12/01/stream/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Diego">
@@ -282,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">安卓终端配置</h1>
+          <h1 class="post-title" itemprop="name headline">串流服务器-srs</h1>
         
 
         <div class="post-meta">
@@ -294,8 +295,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-17T12:12:17+08:00">
-                2018-06-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-12-01T10:32:23+08:00">
+                2021-12-01
               </time>
             
 
@@ -355,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  891
+                  845
                 </span>
               
 
@@ -380,55 +381,37 @@
       
 
       
-        <p><img src="https://i.loli.net/2018/10/09/5bbc12a6b161c.png" alt style="width:100%"></p>
-<p>简要介绍一下安卓终端神器Termux及相关配置</p>
+        <p><img src="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg" alt="trafficLights.jpg"></p>
+<p>使用SRS+OBS做一个自己的直播服务。</p>
 <a id="more"></a>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>首先下载安装<code>Termux</code>，推荐Google play下载。</p>
-<p>下载完成之后直接在系统设置中把<code>Termux</code>的各种权限都打开，以免出现问题。</p>
-<p><code>Hacker&#39;s Keyboard</code>可以一定程度上提高效率。</p>
-<p>安装包使用<code>pkg</code>命令，首先我们安装一些常用包：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim</span><br><span class="line">pkg install wget</span><br><span class="line">pkg install curl</span><br><span class="line">pkg install git</span><br><span class="line">pkg install zsh</span><br><span class="line">pkg install clang</span><br><span class="line">pkg install python python-dev </span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
-<p>用<code>zsh</code>的一定会用<code>oh-my-zsh</code>，但那个是不能直接安装到<code>Termux</code>的，采用这个移植版：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"</span><br></pre></td></tr></table></figure>
-<p>安装完成会有一个选择主题配色和字体的选项，也可以以后在<code>~/.zshrc</code>配置中更改。</p>
-<h2 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h2><p>有了<code>python</code>之后就可以用<code>pip</code>管理包了，先更新一下<code>pip</code>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure>
-<p>使用<code>numpy</code>等包的时候需要相关依赖：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config</span><br></pre></td></tr></table></figure>
-<p>安装<code>Jupyter</code>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install jupyter</span><br></pre></td></tr></table></figure>
-<p>中间报错，缺少<code>crypt.h</code>，Google了一下，是因为缺少一个库导致的：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install libcrypt-dev</span><br></pre></td></tr></table></figure>
-<p>然后就可以正常安装使用了：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --ip=0.0.0.0</span><br></pre></td></tr></table></figure>
-<p>但不会自动弹出浏览器，要手动复制带<code>token</code>的链接，也可以在局域网内其他机器访问<code>192.168.xx.xx:8888</code>，然后输入<code>token</code>进行连接，此时<code>new</code>一个<code>Terminal</code>的话就是类似<code>ssh</code>的连接了。</p>
-<h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>搭建一个<code>ssh</code>服务也很简单，在安装了<code>openssh</code>之后，只需要</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure>
-<p>就可以跑起来一个后台的<code>server</code>，默认端口是<code>8022</code>，不支持用户名+密码的登录方式，只能用公私钥的方式，将电脑端<code>~/.ssh/id_rsa.pub</code>写入<code>termux</code>上的<code>~/.ssh/authorized_keys</code>文件中（可以通过<code>QQ</code>和<code>vim</code>的方式复制，<code>termux</code>的<code>vim</code>可以长按粘贴和触控调整光标位置，很方便）。</p>
-<p>导入证书文件之后，就可以在电脑端登陆了：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 192.168.50.72 -p 8022</span><br></pre></td></tr></table></figure>
-<p>ip地址可以用<code>ifconfig</code>查看，连接会有明显的延迟感。</p>
-<p>退出直接使用<code>exit</code>命令。</p>
-<h2 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h2><p>基于python的微信对接api，接口做的很棒，有不小的发挥空间。</p>
-<p>pip直接安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install itchat</span><br></pre></td></tr></table></figure>
-<p>目前的几点打算：</p>
-<ul>
-<li>查看那些人拉黑/删除了自己，这个写好的代码很多，也没什么好改的</li>
-<li>对接<a href="www.tuling123.com">图灵机器人</a>，可以实现聊天和简单的助手功能</li>
-<li>通过和自己聊天来实现某些控制</li>
-<li><del>在终端里聊天装逼</del></li>
-</ul>
-<p><del>图灵机器人的代码部分经过一个小时的调试做出了1.0版：</del></p>
-<p>2018.7.2更新2.0版，加入了开启关闭功能，原谅我没学过<code>python</code>，代码很丑陋。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> itchat.content <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> itchat</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">KEY = <span class="string">'76ff86311b704f4ea28d4532f0fb3bda'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_response</span><span class="params">(msg)</span>:</span></span><br><span class="line">    apiUrl = <span class="string">'http://www.tuling123.com/openapi/api'</span></span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'key'</span>    : KEY,</span><br><span class="line">        <span class="string">'info'</span>   : msg,</span><br><span class="line">        <span class="string">'userid'</span> : <span class="string">'wechat-robot'</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.post(apiUrl, data=data).json()</span><br><span class="line">        <span class="keyword">return</span> r.get(<span class="string">'text'</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">     </span><br><span class="line">replylist = [<span class="string">'filehelpr'</span>,]</span><br><span class="line"><span class="meta">@itchat.msg_register(itchat.content.TEXT)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">temp_reply</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> msg[<span class="string">'FromUserName'</span>] <span class="keyword">not</span> <span class="keyword">in</span> replylist <span class="keyword">and</span> msg[<span class="string">'Text'</span>] == <span class="string">u'开启分手机器人'</span>:</span><br><span class="line">        replylist.append(msg[<span class="string">'FromUserName'</span>])</span><br><span class="line">        <span class="keyword">return</span> <span class="string">u'分手机器人开启成功'</span></span><br><span class="line">    <span class="keyword">if</span> msg[<span class="string">'FromUserName'</span>] <span class="keyword">in</span> replylist <span class="keyword">and</span> msg[<span class="string">'Text'</span>] == <span class="string">u'关闭分手机器人'</span>:</span><br><span class="line">        replylist.remove(msg[<span class="string">'FromUserName'</span>])</span><br><span class="line">        reply = <span class="string">u'分手机器人关闭成功'</span></span><br><span class="line">    <span class="keyword">if</span> msg[<span class="string">'FromUserName'</span>] <span class="keyword">in</span> replylist:</span><br><span class="line">        reply = get_response(msg[<span class="string">'Text'</span>])</span><br><span class="line">    defaultReply = <span class="string">u'Something wrong happend...'</span></span><br><span class="line">    <span class="keyword">return</span> reply <span class="keyword">or</span> defaultReply</span><br><span class="line"></span><br><span class="line">itchat.auto_login(hotReload=<span class="keyword">True</span>)</span><br><span class="line">itchat.run()</span><br></pre></td></tr></table></figure>
-<h2 id="To-do-List"><a href="#To-do-List" class="headerlink" title="To-do List"></a>To-do List</h2><ul>
-<li style="list-style: none"><input type="checkbox"> hydra渗透</li>
-<li style="list-style: none"><input type="checkbox" checked> ssh</li>
-<li style="list-style: none"><input type="checkbox"> aria2</li>
-<li style="list-style: none"><input type="checkbox" checked> WeChat</li>
-</ul>
-<hr>
+<p>分享屏幕是一个重要的需求，无论是展示内容还是播一会游戏，有一个自己的串流服务器都是很方便的。qq和会议类软件的推流设置不如obs灵活，之前测试过斗鱼和b站的直播，码率都只有4000，对于1080p60fps来说还是低了一些。斗鱼可以加直播密码但是没什么用，如果内容有保密性的话还是需要一个自己的服务器。</p>
+<h1 id="1-SRS"><a href="#1-SRS" class="headerlink" title="1. SRS"></a>1. SRS</h1><blockquote>
+<p>SRS is a simple, high efficiency and realtime video server, supports RTMP, WebRTC, HLS, HTTP-FLV, SRT and GB28181.</p>
+</blockquote>
+<p>我们使用开源的<a href="https://github.com/ossrs/srs" target="_blank" rel="noopener">SRS</a>作为直播服务器，装在客厅的旧笔记本电脑上（本文中ip地址192.168.11.11，请替换为实际地址），资源占用非常低，旧电脑也可以支持几百人的连接。</p>
+<p><img src="https://i.loli.net/2021/12/01/jGvJd87qA1kUWLl.png" alt="resource.png"></p>
+<p>使用docker安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 \</span><br><span class="line">    registry.cn-hangzhou.aliyuncs.com/ossrs/srs:4 ./objs/srs -c conf/srs.conf</span><br></pre></td></tr></table></figure>
+<p>顺利的话控制台<code>192.168.11.11:8080</code>就可以打开了。这个命令是官方doc里的，我运行的时候好像有报错，但是<code>image</code>下载下来了，而且这样是不带<code>WebRTC</code>的。</p>
+<p>为了实现公网访问先设置一下candidate：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CANDIDATE=<span class="string">"router.caikaidi.top"</span></span><br><span class="line"><span class="comment">#替换为公网ip</span></span><br></pre></td></tr></table></figure>
+<p>重新运行一下docker：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -p 1935:1935 -p 1985:1985 -p 8080:8080 --env CANDIDATE=<span class="variable">$CANDIDATE</span> -p 8000:8000/udp 5e0f7</span><br><span class="line"><span class="comment">#5e0f7 为image id</span></span><br></pre></td></tr></table></figure>
+<p>进入docker更改一下配置文件，主要是端口，然后重启docker服务器端的设置就完成了。</p>
+<h1 id="2-OBS"><a href="#2-OBS" class="headerlink" title="2. OBS"></a>2. OBS</h1><p>推流首选<a href="https://obsproject.com/" target="_blank" rel="noopener">obs</a>，我的显示器是1080p的，所以推1080p60fps的流，码率8000就比较清楚了，编码使用显卡的h264加速，推流服务器和密码可以在配置文件中更改，默认为<code>rtmp://192.168.11.11:1935/live</code> &amp; <code>streamlive</code>。</p>
+<p>如果有连麦需求又不想重复捕捉到语音软件的声音，可以使用插件<a href="https://github.com/bozbez/win-capture-audio/tree/v2.1.0-beta" target="_blank" rel="noopener">win-capture-audio</a>，可以像添加视频源一样添加音频源。</p>
+<h1 id="3-client"><a href="#3-client" class="headerlink" title="3. client"></a>3. client</h1><p>客户端我们直接使用网页h5播放，兼容性和性能都比较好。b站有一个开源的<a href="http://bilibili.github.io/flv.js/demo/" target="_blank" rel="noopener">flv播放器demo</a>，我们做一个网页复制一下代码就可以了。</p>
+<p>确保引用了<code>flv.js</code>，在<code>html</code>中播放器的代码是这一小段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"video-container"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">video</span> <span class="attr">name</span>=<span class="string">"videoElement"</span> <span class="attr">class</span>=<span class="string">"centeredVideo"</span> <span class="attr">controls</span> <span class="attr">autoplay</span>&gt;</span></span><br><span class="line">                    Your browser is too old which doesn't support HTML5 video.</span><br><span class="line">                <span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>不需要的功能和按钮可以在<code>css</code>中添加一个属性：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">visibility</span>: <span class="selector-tag">hidden</span>;</span><br></pre></td></tr></table></figure>
+<p>下面这段的url直接改成串流地址<code>http://router.caikaidi.top:8080/live/livestream.flv</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"url-input"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"sURL"</span>&gt;</span>Stream URL:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"sURL"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"http://127.0.0.1/flv/7182741-1.flv"</span> /&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"switch_mds()"</span>&gt;</span>Switch to MediaDataSource<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>运营商一般会屏蔽8080端口，这就是前面配置文件改端口的原因。</p>
+<h1 id="4-hexo"><a href="#4-hexo" class="headerlink" title="4. hexo"></a>4. hexo</h1><p>我的网页直接挂在了<code>hexo</code>搭建的博客上，在<code>/source/_post</code>下新建一个文件夹<code>stream</code>，把<code>js</code>，<code>html</code>，<code>css</code>都放进去，在<code>_config.yml</code>里避免渲染这个文件夹：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skip_render:</span><br><span class="line">  - &quot;stream/*&quot;</span><br></pre></td></tr></table></figure>
+<p>这样就可以通过主页+<code>/stream</code>的域名访问了，我们把链接添加到侧边栏，在主题的配置文件<code>/themes/next/_config.yml</code>中添加:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">links:</span><br><span class="line">  本楊的直播间: /stream</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -454,9 +437,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/安卓/" rel="tag"># 安卓</a>
+            <a href="/tags/server/" rel="tag"># server</a>
           
-            <a href="/tags/Termux/" rel="tag"># Termux</a>
+            <a href="/tags/srs/" rel="tag"># srs</a>
+          
+            <a href="/tags/stream/" rel="tag"># stream</a>
           
         </div>
       
@@ -480,8 +465,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/10/matplotlib/" rel="next" title="python作图">
-                <i class="fa fa-chevron-left"></i> python作图
+              <a href="/2021/04/08/server/" rel="next" title="家庭服务器——seafile">
+                <i class="fa fa-chevron-left"></i> 家庭服务器——seafile
               </a>
             
           </div>
@@ -489,10 +474,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/02/ciomp/" rel="prev" title="CIOMP">
-                CIOMP <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -697,7 +678,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH"><span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信"><span class="nav-text">微信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-do-List"><span class="nav-text">To-do List</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-SRS"><span class="nav-text">1. SRS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-OBS"><span class="nav-text">2. OBS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-client"><span class="nav-text">3. client</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-hexo"><span class="nav-text">4. hexo</span></a></li></ol></div>
             
 
           </div>
