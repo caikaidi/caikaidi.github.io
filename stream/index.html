@@ -14,7 +14,7 @@
             <div id="streamURL">
                 <div class="url-input" class="hidden">
                     <label for="sURL">Stream URL:</label>
-                    <input id="sURL" type="text" value="" />
+                    <input id="sURL" type="text" value="http://router.caikaidi.top:9503/live/livestream.flv" />
                     <button onclick="switch_mds()">Switch to MediaDataSource</button>
                 </div>
                 <div class="options" class="hidden">
@@ -35,7 +35,7 @@
             <div id="mediaSourceURL" class="hidden">
                 <div class="url-input">
                     <label for="msURL">MediaDataSource JsonURL:</label>
-                    <input id="msURL" type="text" value="http://router.caikaidi.top:9503/live/livestream.flv" />
+                    <input id="msURL" type="text" value="" />
                     <button onclick="switch_url()">Switch to URL</button>
                 </div>
             </div>
@@ -67,7 +67,7 @@
         function flv_load() {
             console.log('isSupported: ' + flvjs.isSupported());
             if (mediaSourceURL.className === '') {
-                var url = document.getElementById('msURL').value;
+                var url = "http://router.caikaidi.top:9503/live/livestream.flv";
     
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', url, true);
