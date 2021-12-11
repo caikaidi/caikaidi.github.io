@@ -4,8 +4,6 @@ https://caikaidi.cn/2021/03/10/beamquality/
 https://caikaidi.cn/2020/10/02/reference/
 https://caikaidi.cn/2019/11/22/wsl/
 https://caikaidi.cn/2019/06/03/ZBLAN/
-https://caikaidi.cn/2019/05/29/AYear/
-https://caikaidi.cn/2018/09/02/ciomp/
 https://caikaidi.cn/2018/06/17/android/
 https://caikaidi.cn/2018/06/10/matplotlib/
 https://caikaidi.cn/2018/06/08/xuexiao/
