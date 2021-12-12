@@ -97,13 +97,13 @@
 <meta property="og:site_name" content="本楊">
 <meta property="og:description" content="出于多平台之间iCloud和OneDrive非常差的表现，决定自己搭一个服务器做网盘，顺便也搞了一下emby服务和远程串流。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2021/04/08/SFHswdtC7byh59M.png">
-<meta property="og:image" content="https://i.loli.net/2021/04/08/ko2Nx4JK6eIgyhB.png">
+<meta property="og:image" content="https://caikaidi.cn/2021/04/08/server/images/myloading.gif">
+<meta property="og:image" content="https://caikaidi.cn/2021/04/08/server/images/myloading.gif">
 <meta property="og:updated_time" content="2021-04-08T12:11:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="家庭服务器——seafile">
 <meta name="twitter:description" content="出于多平台之间iCloud和OneDrive非常差的表现，决定自己搭一个服务器做网盘，顺便也搞了一下emby服务和远程串流。">
-<meta name="twitter:image" content="https://i.loli.net/2021/04/08/SFHswdtC7byh59M.png">
+<meta name="twitter:image" content="https://caikaidi.cn/2021/04/08/server/images/myloading.gif">
 
 
 
@@ -391,7 +391,7 @@
       
 
       
-        <p><img src="https://i.loli.net/2021/04/08/SFHswdtC7byh59M.png" alt style="width:60%"></p>
+        <p><img src="images/myloading.gif" data-original="https://i.loli.net/2021/04/08/SFHswdtC7byh59M.png" alt style="width:60%"></p>
 <p>出于多平台之间iCloud和OneDrive非常差的表现，决定自己搭一个服务器做网盘，顺便也搞了一下emby服务和远程串流。</p>
 <a id="more"></a>
 <p>之前用软链接的方法让iCloud和OneDrive同步同一个文件夹，但是出现了奇怪的bug，好像是进入了无限循环，当时在办公室网络环境又很差，我就关掉了iCloud，直接导致一些实验数据永远的丢失了。<br>从那之后就一直使用OneDrive同步文件，OneDrive像条狗一样在我每次打开的时候问我要不要打开相册同步，有一次我实在受不了了就点了打开，想着之后就可以不用iCloud了，毕竟每个月几十块钱也是一笔基本上浪费掉的支出。<br>但我打开了之后，几万张照片直接让OneDrive受不了了，我开着iPad放了一两天才完成文件索引，上传又用了好久，最后时间顺序还是乱的。</p>
@@ -407,7 +407,7 @@
 <li>阿里云买一个域名，并且生成一个管理用的<code>Access Key</code>。</li>
 <li>路由器刷梅林固件，安装aliddns，填上域名和<code>Access Key</code>和各项设置。（这一步路由器不支持的话应该也可以在服务器上写个脚本实现。）</li>
 </ol>
-<p><img src="https://i.loli.net/2021/04/08/ko2Nx4JK6eIgyhB.png" alt="aliddns.png"></p>
+<p><img src="images/myloading.gif" data-original="https://i.loli.net/2021/04/08/ko2Nx4JK6eIgyhB.png" alt="aliddns.png"></p>
 <h3 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h3><p>DDNS运行起来之后就可以通过域名访问自家IP了，接下来就是把各种服务的端口开放给公网，有两级路由器就要做两次端口转发，运营商屏蔽的端口就转发成别的。<br>比如seafile用的80端口就是屏蔽的，假设服务器是<code>192.168.2.2</code>，二级路由器是<code>192.168.2.1</code>，那么只需要在一级路由设置<code>192.168.2.1:80</code>映射到公网某端口，比如<code>9999</code>，然后二级路由器设置<code>192.168.2.2:80</code>到<code>80</code>端口的映射，就可以通过公网<code>url:9999</code>访问seafile服务了。</p>
 <p>这里需要在seafile的web设置界面把：</p>
 <p><code>SERVICE_URL</code>设置成<code>http://公网url:9999</code></p>
@@ -433,7 +433,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechatqcode.jpg" alt="Diego wechat" style="width: 200px; max-width: 100%;">
+    <img id="wechat_subscriber_qcode" src="images/myloading.gif" data-original="/images/wechatqcode.jpg" alt="Diego wechat" style="width: 200px; max-width: 100%;">
     <div>欢迎扫上面的二维码关注我的微信公众号OvO</div>
 </div>
 
@@ -553,7 +553,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
-            <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Diego">
+            <img class="site-author-image" itemprop="image" src="images/myloading.gif" data-original="/images/avatar.png" alt="Diego">
           
             <p class="site-author-name" itemprop="name">Diego</p>
             <p class="site-description motion-element" itemprop="description"></p>
@@ -906,6 +906,21 @@ show_date_time();
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   <script type="text/javascript">
@@ -940,7 +955,13 @@ show_date_time();
 $("body").backstretch("https://i.loli.net/2018/05/30/5b0e0e6352c73.jpg");
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"log":false,"tagMode":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
 
 <script type="text/javascript" src="/js/src/love.js"></script>

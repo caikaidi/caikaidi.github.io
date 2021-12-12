@@ -97,13 +97,13 @@
 <meta property="og:site_name" content="本楊">
 <meta property="og:description" content="使用SRS+OBS做一个自己的直播服务。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg">
-<meta property="og:image" content="https://i.loli.net/2021/12/01/jGvJd87qA1kUWLl.png">
+<meta property="og:image" content="https://caikaidi.cn/2021/12/01/stream/images/myloading.gif">
+<meta property="og:image" content="https://caikaidi.cn/2021/12/01/stream/images/myloading.gif">
 <meta property="og:updated_time" content="2021-12-12T04:09:57.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="串流服务器-srs">
 <meta name="twitter:description" content="使用SRS+OBS做一个自己的直播服务。">
-<meta name="twitter:image" content="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg">
+<meta name="twitter:image" content="https://caikaidi.cn/2021/12/01/stream/images/myloading.gif">
 
 
 
@@ -391,7 +391,7 @@
       
 
       
-        <p><img src="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg" alt="50%" style="width:60%"></p>
+        <p><img src="images/myloading.gif" data-original="https://i.loli.net/2021/12/01/nhL3liyzHI6tOug.jpg" alt="50%" style="width:60%"></p>
 <p>使用SRS+OBS做一个自己的直播服务。</p>
 <a id="more"></a>
 <p>分享屏幕是一个重要的需求，无论是展示内容还是播一会游戏，有一个自己的串流服务器都是很方便的。qq和会议类软件的推流设置不如obs灵活，之前测试过斗鱼和b站的直播，码率都只有4000，对于1080p60fps来说还是低了一些。斗鱼可以加直播密码但是没什么用，如果内容有保密性的话还是需要一个自己的服务器。</p>
@@ -399,7 +399,7 @@
 <p>SRS is a simple, high efficiency and realtime video server, supports RTMP, WebRTC, HLS, HTTP-FLV, SRT and GB28181.</p>
 </blockquote>
 <p>我们使用开源的<a href="https://github.com/ossrs/srs" target="_blank" rel="noopener">SRS</a>作为直播服务器，装在客厅的旧笔记本电脑上（本文中ip地址192.168.11.11，请替换为实际地址），资源占用非常低，旧电脑也可以支持几百人的连接。</p>
-<p><img src="https://i.loli.net/2021/12/01/jGvJd87qA1kUWLl.png" alt="resource.png"></p>
+<p><img src="images/myloading.gif" data-original="https://i.loli.net/2021/12/01/jGvJd87qA1kUWLl.png" alt="resource.png"></p>
 <p>使用docker安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 \</span><br><span class="line">    registry.cn-hangzhou.aliyuncs.com/ossrs/srs:4 ./objs/srs -c conf/srs.conf</span><br></pre></td></tr></table></figure>
 <p>顺利的话控制台<code>192.168.11.11:8080</code>就可以打开了。这个命令是官方doc里的，我运行的时候好像有报错，但是<code>image</code>下载下来了，而且这样是不带<code>WebRTC</code>的。</p>
@@ -432,7 +432,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechatqcode.jpg" alt="Diego wechat" style="width: 200px; max-width: 100%;">
+    <img id="wechat_subscriber_qcode" src="images/myloading.gif" data-original="/images/wechatqcode.jpg" alt="Diego wechat" style="width: 200px; max-width: 100%;">
     <div>欢迎扫上面的二维码关注我的微信公众号OvO</div>
 </div>
 
@@ -554,7 +554,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
-            <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Diego">
+            <img class="site-author-image" itemprop="image" src="images/myloading.gif" data-original="/images/avatar.png" alt="Diego">
           
             <p class="site-author-name" itemprop="name">Diego</p>
             <p class="site-description motion-element" itemprop="description"></p>
@@ -907,6 +907,21 @@ show_date_time();
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   <script type="text/javascript">
@@ -941,7 +956,13 @@ show_date_time();
 $("body").backstretch("https://i.loli.net/2018/05/30/5b0e0e6352c73.jpg");
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"log":false,"tagMode":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
 
 <script type="text/javascript" src="/js/src/love.js"></script>

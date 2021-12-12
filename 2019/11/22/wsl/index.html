@@ -97,13 +97,13 @@
 <meta property="og:site_name" content="本楊">
 <meta property="og:description" content="Windows系统的cmd和powershell可以说是天下人苦之久矣，在win10下使用git或者一些linux十分顺手的操作比如sudo vim host 之类，都是令人十分痛苦和不适的。而WSL的出现完美的解决了这一需求。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/11/22/vYHe978dhoqi6O3.png">
-<meta property="og:image" content="https://i.loli.net/2019/11/22/YRoeifbSWNXZFck.png">
+<meta property="og:image" content="https://caikaidi.cn/2019/11/22/wsl/images/myloading.gif">
+<meta property="og:image" content="https://caikaidi.cn/2019/11/22/wsl/images/myloading.gif">
 <meta property="og:updated_time" content="2021-04-08T12:14:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wsl快速搭建">
 <meta name="twitter:description" content="Windows系统的cmd和powershell可以说是天下人苦之久矣，在win10下使用git或者一些linux十分顺手的操作比如sudo vim host 之类，都是令人十分痛苦和不适的。而WSL的出现完美的解决了这一需求。">
-<meta name="twitter:image" content="https://i.loli.net/2019/11/22/vYHe978dhoqi6O3.png">
+<meta name="twitter:image" content="https://caikaidi.cn/2019/11/22/wsl/images/myloading.gif">
 
 
 
@@ -391,7 +391,7 @@
       
 
       
-        <p><img src="https://i.loli.net/2019/11/22/vYHe978dhoqi6O3.png" alt style="width:100%"><br>Windows系统的cmd和powershell可以说是天下人苦之久矣，在win10下使用git或者一些linux十分顺手的操作比如<code>sudo vim host</code> 之类，都是令人十分痛苦和不适的。而WSL的出现完美的解决了这一需求。<br><a id="more"></a></p>
+        <p><img src="images/myloading.gif" data-original="https://i.loli.net/2019/11/22/vYHe978dhoqi6O3.png" alt style="width:100%"><br>Windows系统的cmd和powershell可以说是天下人苦之久矣，在win10下使用git或者一些linux十分顺手的操作比如<code>sudo vim host</code> 之类，都是令人十分痛苦和不适的。而WSL的出现完美的解决了这一需求。<br><a id="more"></a></p>
 <blockquote>
 <p>Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的Ubuntu 14.04 “Trusty Tahr”映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p>
 </blockquote>
@@ -405,7 +405,7 @@
 <h3 id="2-2-字体"><a href="#2-2-字体" class="headerlink" title="2.2 字体"></a>2.2 字体</h3><p><code>agnoster</code>需要用到<a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">powerline</a>字体，这个字体的GitHub页面是没有提供Windows安装方式的，我这里试了半天，会一直出现字体装上了但终端里设置不了的问题，解决方法是手动在其GitHub主页上Download Zip，解压，然后用管理员权限的powershell运行里面的<code>install.ps1</code>文件。为避免权限问题，依次执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set-ExecutionPolicy Bypass</span><br><span class="line">.\install.ps1</span><br><span class="line">set-ExecutionPolicy Default</span><br></pre></td></tr></table></figure>
 <p>此时回到命令行即可设置字体，这里使用<code>DejaVu Sans Mono for Powerline</code>，可以支持主题中的特殊符号。</p>
-<p><img src="https://i.loli.net/2019/11/22/YRoeifbSWNXZFck.png" alt="zsh"></p>
+<p><img src="images/myloading.gif" data-original="https://i.loli.net/2019/11/22/YRoeifbSWNXZFck.png" alt="zsh"></p>
 <p>配置好的ZSH效果是这样的，欢迎字符的显示可以在zshrc中添加以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">CLICOLOR=1</span><br><span class="line">LSCOLORS=gxfxcxdxbxegedabagacad</span><br><span class="line"><span class="comment"># export PS1='%&#123;%f%b%k%&#125;$(build_prompt)'</span></span><br><span class="line"><span class="built_in">export</span> TERM=xterm-color</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/.rvm/bin"</span> <span class="comment"># Add RVM to PATH for scripting</span></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">" FBI Warining "</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">" "</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span>\033[41;37;5m FBI WARNING \033[0m"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">" "</span></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"Ferderal Law provides severe civil and criminal penalties for"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"the unauthorized reproduction, distribution, or exhibition of"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"copyrighted motion pictures (Title 17, United States Code,"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"Sections 501 and 508). The Federal Bureau of Investigation"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"investigates allegations of criminal copyright infringement"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"(Title 17, United States Code, Section 506)."</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">" "</span></span><br></pre></td></tr></table></figure></p>
 <p>wdnmd字样来自一个插件<code>figlet</code>，ASICII艺术字。</p>
 <h3 id="2-3-vim"><a href="#2-3-vim" class="headerlink" title="2.3 vim"></a>2.3 vim</h3><p>vim是一个可以高度定制化的工具，按照我的喜好，我在<code>~/.vim/vimrc</code>中添加了大量设置。</p>
@@ -425,7 +425,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechatqcode.jpg" alt="Diego wechat" style="width: 200px; max-width: 100%;">
+    <img id="wechat_subscriber_qcode" src="images/myloading.gif" data-original="/images/wechatqcode.jpg" alt="Diego wechat" style="width: 200px; max-width: 100%;">
     <div>欢迎扫上面的二维码关注我的微信公众号OvO</div>
 </div>
 
@@ -545,7 +545,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
-            <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Diego">
+            <img class="site-author-image" itemprop="image" src="images/myloading.gif" data-original="/images/avatar.png" alt="Diego">
           
             <p class="site-author-name" itemprop="name">Diego</p>
             <p class="site-description motion-element" itemprop="description"></p>
@@ -898,6 +898,21 @@ show_date_time();
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   <script type="text/javascript">
@@ -952,7 +967,13 @@ show_date_time();
 $("body").backstretch("https://i.loli.net/2018/05/30/5b0e0e6352c73.jpg");
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"log":false,"tagMode":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
 
 <script type="text/javascript" src="/js/src/love.js"></script>
