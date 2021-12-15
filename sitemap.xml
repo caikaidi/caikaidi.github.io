@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://caikaidi.cn/2021/04/08/server/</loc>
+    
+    <lastmod>2021-12-15T11:36:27.167Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://caikaidi.cn/2020/10/02/reference/</loc>
+    
+    <lastmod>2021-12-15T11:36:01.903Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://caikaidi.cn/2021/03/10/beamquality/</loc>
     
-    <lastmod>2021-12-12T04:10:17.426Z</lastmod>
+    <lastmod>2021-12-15T11:34:11.933Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://caikaidi.cn/2021/12/12/reading/</loc>
+    
+    <lastmod>2021-12-15T11:33:07.133Z</lastmod>
     
   </url>
   
@@ -16,30 +37,9 @@
   </url>
   
   <url>
-    <loc>https://caikaidi.cn/2021/12/12/reading/</loc>
-    
-    <lastmod>2021-12-12T04:03:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://caikaidi.cn/2020/10/02/reference/</loc>
-    
-    <lastmod>2021-04-08T12:15:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://caikaidi.cn/2019/11/22/wsl/</loc>
     
     <lastmod>2021-04-08T12:14:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://caikaidi.cn/2021/04/08/server/</loc>
-    
-    <lastmod>2021-04-08T12:11:55.000Z</lastmod>
     
   </url>
   
